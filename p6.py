@@ -41,6 +41,9 @@ class CalculatorEngine(object):
     elif (op == '/'): self.doDivision()
 class RPNCalculator(CalculatorEngine):
   def __init__(self):
-# your code here
+    calc = RPNCalculator(CalculatorEngine)
   def eval (self, line):
-# your code here
+    try:
+      self.eval(lambda x, y: x % y)
+    except ZeroDivisionError:
+      print("divide by 0!")
